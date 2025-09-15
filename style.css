@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  background: #f9f9f9;
+  color: #111;
+  line-height: 1.6;
+}
+
+header {
+  background: #00695c;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+header .contact-info {
+  font-size: 14px;
+  text-align: right;
+}
+
+nav {
+  background: #004d40;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #222;
+}
+
+h1 { margin-top: 20px; font-size: 28px; }
+h2 { margin-top: 15px; font-size: 22px; }
+
+p, ul { font-size: 16px; margin: 15px 20px; }
+ul { padding-right: 40px; }
+ul li { margin-bottom: 10px; }
+
+form { margin: 20px; text-align: right; }
+input, textarea { width: 100%; max-width: 500px; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Cairo', sans-serif; font-size: 15px; }
+button { background-color: #009688; color: white; padding: 10px 20px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; margin-top: 10px; }
+button:hover { background-color: #004d40; }
+
+footer { background: #004d40; color: white; text-align: center; padding: 10px; margin-top: 20px; font-size: 14px; }
+
+@media (max-width: 768px) {
+  header { flex-direction: column; text-align: center; }
+  header .logo img { margin-bottom: 10px; }
+  nav a { display: block; margin: 5px 0; }
+  input, textarea { width: 90%; }
+}
