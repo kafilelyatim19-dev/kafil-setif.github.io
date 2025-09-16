@@ -8,33 +8,72 @@
 </head>
 <body>
 
-<header>
-  <div class="logo"><img src="images/logo.png" alt="شعار الجمعية"></div>
-  <div class="contact-info">
-    <p>📞 0553 11 90 91 | 0549 07 88 89</p>
-    <p>✉️ kafil.yatim@yahoo.com</p>
-  </div>
-</header>
+  <!-- ========== الهيدر ========== -->
+  <header>
+    <div class="navbar">
+      <!-- الشعار الأول -->
+      <div class="logo">
+        <img src="images/logo1.png" alt="شعار الجمعية">
+      </div>
 
-<nav>
-  <a href="index.html" class="active">الرئيسية</a>
-  <a href="wilaya.html">المكتب الولائي</a>
-  <a href="campaigns.html">الحملات</a>
-  <a href="projects.html">المشاريع</a>
-  <a href="municipalities.html">المكاتب البلدية</a>
-  <a href="news.html">آخر المستجدات</a>
-  <a href="about.html">من نحن</a>
-  <a href="contact.html">تواصل معنا</a>
-</nav>
+      <!-- عناصر القائمة -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="wilaya.html">المكتب الولائي</a></li>
+          <li><a href="campaigns.html">الحملات</a></li>
+          <li><a href="projects.html">المشاريع</a></li>
+          <li><a href="municipal.html">المكاتب البلدية</a></li>
+          <li><a href="news.html">آخر المستجدات</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </nav>
 
-<main>
-  <h1>مرحبا بكم في الجمعية الخيرية كافل اليتيم الوطنية</h1>
-  <p>نرحب بكم في موقعنا الرسمي، حيث تجدون كل أخبارنا، أنشطتنا، ومشاريعنا لدعم الأيتام والمحتاجين.</p>
-</main>
+      <!-- زر ساهم معنا + زر القائمة للهاتف -->
+      <div class="mobile-menu">
+        <button class="donate-btn">ساهم معنا</button>
+        <span class="menu-icon" onclick="openMenu()">☰</span>
+      </div>
 
-<footer>
-  <p>© 2025 الجمعية الخيرية كافل اليتيم الوطنية - المكتب الولائي سطيف</p>
-</footer>
+      <!-- الشعار الثاني -->
+      <div class="logo">
+        <img src="images/logo2.png" alt="شعار الجمعية 2">
+      </div>
+    </div>
+
+    <!-- القائمة الجانبية للهاتف -->
+    <div id="sideMenu" class="side-menu">
+      <span class="close-btn" onclick="closeMenu()">✖</span>
+      <ul>
+        <li><a href="index.html" class="active">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="wilaya.html">المكتب الولائي</a></li>
+        <li><a href="campaigns.html">الحملات</a></li>
+        <li><a href="projects.html">المشاريع</a></li>
+        <li><a href="municipal.html">المكاتب البلدية</a></li>
+        <li><a href="news.html">آخر المستجدات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- ========== نهاية الهيدر ========== -->
+
+  <main>
+    <h1>مرحبًا بكم في الجمعية الخيرية كافل اليتيم الوطنية - المكتب الولائي سطيف</h1>
+    <p>هذا مثال للصفحة الرئيسية.</p>
+  </main>
+
+  <!-- JavaScript -->
+  <script>
+    function openMenu() {
+      document.getElementById("sideMenu").style.right = "0";
+    }
+    function closeMenu() {
+      document.getElementById("sideMenu").style.right = "-100%";
+    }
+  </script>
 
 </body>
 </html>
+
