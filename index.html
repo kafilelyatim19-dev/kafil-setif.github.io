@@ -3,85 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الصفحة الرئيسية - كافل اليتيم</title>
+  <title>الجمعية الخيرية كافل اليتيم - سطيف</title>
   <link rel="stylesheet" href="style.css">
+  <!-- خط Cairo -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- هيدر -->
+  <!-- الهيدر -->
   <header>
-    <!-- شعار 01 يمين -->
+    <!-- شعار يمين -->
     <div class="logo logo-right">
-      <img src="logo1.png" alt="شعار 01">
+      <img src="images/logo1.png" alt="شعار 01">
     </div>
 
-    <!-- القائمة وسط (للكمبيوتر) -->
-    <nav class="nav-center">
-      <ul>
-        <li><a href="#" class="active">الصفحة الرئيسية</a></li>
-        <li><a href="#">من نحن</a></li>
-        <li><a href="#">المكتب الولائي</a></li>
-        <li><a href="#">الحملات</a></li>
-        <li><a href="#">المشاريع</a></li>
-        <li><a href="#">المكاتب البلدية</a></li>
-        <li><a href="#" class="donate-link">ساهم معنا</a></li>
-        <li><a href="#">الاتصال</a></li>
-      </ul>
+    <!-- القائمة في المنتصف -->
+    <nav class="nav-links">
+      <a href="index.html" class="active">الصفحة الرئيسية</a>
+      <a href="about.html">من نحن</a>
+      <a href="wilaya.html">المكتب الولائي</a>
+      <a href="campaigns.html">الحملات</a>
+      <a href="projects.html">المشاريع</a>
+      <a href="local.html">المكاتب البلدية</a>
+      <a href="donate.html" class="btn-donate">ساهم معنا</a>
+      <a href="contact.html">الاتصال</a>
     </nav>
 
-    <!-- شعار 02 يسار -->
+    <!-- شعار يسار -->
     <div class="logo logo-left">
-      <img src="logo2.png" alt="شعار 02">
+      <img src="images/logo2.png" alt="شعار 02">
     </div>
 
-    <!-- نسخة الهاتف -->
-    <div class="mobile-header">
-      <div class="mobile-logos">
-        <img src="logo1.png" alt="شعار 01">
-        <img src="logo2.png" alt="شعار 02">
-      </div>
-      <div class="mobile-actions">
-        <button class="hamburger">☰</button>
-        <a href="#" class="donate-btn">ساهم معنا</a>
-      </div>
+    <!-- الهاتف -->
+    <div class="mobile-controls">
+      <button class="menu-toggle">☰</button>
+      <a href="donate.html" class="btn-donate">ساهم معنا</a>
     </div>
   </header>
 
-  <!-- فاصل -->
-  <div class="divider"></div>
-
-  <!-- القائمة المنسدلة (للهاتف) -->
-  <div class="mobile-slide" id="mobileSlide">
-    <button class="close-btn">×</button>
-    <ul>
-      <li><a href="#" class="active">الصفحة الرئيسية</a></li>
-      <li><a href="#">من نحن</a></li>
-      <li><a href="#">المكتب الولائي</a></li>
-      <li><a href="#">الحملات</a></li>
-      <li><a href="#">المشاريع</a></li>
-      <li><a href="#">المكاتب البلدية</a></li>
-      <li><a href="#" class="donate-link">ساهم معنا</a></li>
-      <li><a href="#">الاتصال</a></li>
-    </ul>
+  <!-- القائمة المنسدلة للهاتف -->
+  <div class="mobile-menu">
+    <button class="close-menu">✕</button>
+    <a href="index.html" class="active">الصفحة الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="wilaya.html">المكتب الولائي</a>
+    <a href="campaigns.html">الحملات</a>
+    <a href="projects.html">المشاريع</a>
+    <a href="local.html">المكاتب البلدية</a>
+    <a href="donate.html" class="btn-donate">ساهم معنا</a>
+    <a href="contact.html">الاتصال</a>
   </div>
 
-  <!-- المحتوى -->
+  <!-- محتوى تجريبي -->
   <main>
-    <section class="hero">
-      <h1>مرحبا بكم في الجمعية الخيرية كافل اليتيم</h1>
-      <p>نحن نعمل لخدمة الأيتام ودعم المشاريع الخيرية في مختلف البلديات.</p>
-    </section>
-
-    <section class="content">
-      <h2>آخر المستجدات</h2>
-      <p>هنا يمكن أن تضيف أخبار الجمعية، الحملات، والمشاريع الأخيرة.</p>
+    <section>
+      <h1>مرحباً بكم في الجمعية الخيرية كافل اليتيم الوطنية - المكتب الولائي سطيف</h1>
+      <p>هذا مثال لمحتوى الصفحة الرئيسية.</p>
     </section>
   </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 الجمعية الخيرية كافل اليتيم - المكتب الولائي سطيف</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
