@@ -7,27 +7,26 @@
 }
 
 body {
-  background: #f8f9fa;
+  background: #fff;
+  color: #000;
 }
 
-/* الهيدر للحاسوب */
+/* هيدر */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #ffffff;
+  background: #fff;
   padding: 10px 30px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: relative;
 }
 
-/* الشعارين */
 .logo img {
   height: 65px;
 }
 
 .logo-right img {
-  height: 80px; /* شعار 01 أكبر */
+  height: 80px;
 }
 
 .logo-left img {
@@ -49,14 +48,36 @@ header {
 
 .nav-center ul li a {
   text-decoration: none;
-  color: #333;
+  color: #000;
   font-size: 17px;
   font-weight: 500;
   transition: 0.3s;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.nav-center ul li a.active {
+  color: #28a745;
+  font-weight: bold;
 }
 
 .nav-center ul li a:hover {
-  color: #007bff;
+  background: #f1f1f1;
+}
+
+/* زر ساهم معنا (داخل القائمة) */
+.donate-link {
+  background: linear-gradient(135deg, #1e7e34, #28a745);
+  color: #fff !important;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+/* فاصل */
+.divider {
+  height: 3px;
+  background: linear-gradient(to right, #28a745, transparent);
+  margin-bottom: 20px;
 }
 
 /* نسخة الهاتف */
@@ -80,13 +101,16 @@ header {
 
 .hamburger {
   font-size: 26px;
-  background: none;
+  background: #888;
+  color: #fff;
   border: none;
   cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 
 .donate-btn {
-  background: #007bff;
+  background: linear-gradient(135deg, #1e7e34, #28a745);
   color: #fff;
   padding: 6px 14px;
   border-radius: 6px;
@@ -94,29 +118,7 @@ header {
   font-size: 14px;
 }
 
-/* القائمة المخفية للهاتف (عادية) */
-.mobile-menu {
-  display: none;
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 10px;
-}
-
-.mobile-menu ul {
-  list-style: none;
-}
-
-.mobile-menu ul li {
-  padding: 10px 0;
-}
-
-.mobile-menu ul li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-}
-
-/* القائمة slide من الجانب */
+/* القائمة slide للهاتف */
 .mobile-slide {
   height: 100%;
   width: 0;
@@ -143,7 +145,12 @@ header {
 .mobile-slide ul li a {
   text-decoration: none;
   font-size: 18px;
-  color: #333;
+  color: #000;
+}
+
+.mobile-slide ul li a.active {
+  color: #28a745;
+  font-weight: bold;
 }
 
 .close-btn {
@@ -154,6 +161,44 @@ header {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+/* المحتوى */
+main {
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #28a745;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.content {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.content h2 {
+  margin-bottom: 10px;
+  color: #28a745;
+}
+
+/* Footer */
+footer {
+  background: #f1f1f1;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
 }
 
 /* ⚡ الميديا */
