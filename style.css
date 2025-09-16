@@ -1,215 +1,124 @@
-/* عام */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Tajawal", sans-serif;
-}
-
+/* الخطوط العامة */
 body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
   background: #fff;
   color: #000;
+  line-height: 1.6;
 }
 
-/* هيدر */
+/* الهيدر */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #fff;
-  padding: 10px 30px;
+  padding: 25px 40px; /* مساحة أكبر */
   position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
+/* الشعار */
 .logo img {
-  height: 65px;
+  height: 70px;
 }
+.logo-right { order: 1; }
+.nav-links { order: 2; flex: 1; text-align: center; }
+.logo-left { order: 3; }
 
-.logo-right img {
-  height: 80px;
-}
-
-.logo-left img {
-  height: 65px;
-}
-
-/* القائمة وسط */
-.nav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.nav-center ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-.nav-center ul li a {
+/* روابط القائمة */
+.nav-links a {
+  margin: 0 15px;
   text-decoration: none;
   color: #000;
-  font-size: 17px;
-  font-weight: 500;
-  transition: 0.3s;
-  padding: 6px 10px;
-  border-radius: 6px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #2e7d32; /* أخضر */
+}
+.nav-links a.active {
+  color: #2e7d32;
 }
 
-.nav-center ul li a.active {
-  color: #28a745;
-  font-weight: bold;
-}
-
-.nav-center ul li a:hover {
-  background: #f1f1f1;
-}
-
-/* زر ساهم معنا (داخل القائمة) */
-.donate-link {
-  background: linear-gradient(135deg, #1e7e34, #28a745);
+/* زر ساهم معنا */
+.btn-donate {
+  background: linear-gradient(135deg, #1b5e20, #4caf50);
   color: #fff !important;
-  padding: 6px 14px;
-  border-radius: 6px;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-/* فاصل */
-.divider {
-  height: 3px;
-  background: linear-gradient(to right, #28a745, transparent);
+/* الهاتف */
+.mobile-controls {
+  display: none;
+  gap: 10px;
+}
+.menu-toggle {
+  background: #888;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* القائمة المنسدلة */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 60%;
+  height: 100%;
+  background: #fff;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 2000;
+}
+.mobile-menu a {
+  margin: 10px 0;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+.mobile-menu a.active {
+  color: #2e7d32;
+}
+.close-menu {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
   margin-bottom: 20px;
 }
 
-/* نسخة الهاتف */
-.mobile-header {
-  display: none;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.mobile-logos img {
-  height: 50px;
-  margin-left: 5px;
-}
-
-.mobile-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.hamburger {
-  font-size: 26px;
-  background: #888;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  padding: 6px 10px;
-  border-radius: 6px;
-}
-
-.donate-btn {
-  background: linear-gradient(135deg, #1e7e34, #28a745);
-  color: #fff;
-  padding: 6px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-/* القائمة slide للهاتف */
-.mobile-slide {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #fff;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-  overflow-x: hidden;
-  transition: 0.4s;
-  padding-top: 60px;
-  z-index: 9999;
-}
-
-.mobile-slide ul {
-  list-style: none;
-  padding: 20px;
-}
-
-.mobile-slide ul li {
-  margin: 15px 0;
-}
-
-.mobile-slide ul li a {
-  text-decoration: none;
-  font-size: 18px;
-  color: #000;
-}
-
-.mobile-slide ul li a.active {
-  color: #28a745;
-  font-weight: bold;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  font-size: 30px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* المحتوى */
-main {
-  padding: 20px;
-}
-
-.hero {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.hero h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #28a745;
-}
-
-.hero p {
-  font-size: 18px;
-}
-
-.content {
-  margin: 20px auto;
-  max-width: 800px;
-}
-
-.content h2 {
-  margin-bottom: 10px;
-  color: #28a745;
-}
-
-/* Footer */
-footer {
-  background: #f1f1f1;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
-
-/* ⚡ الميديا */
+/* تجاوب الهاتف */
 @media (max-width: 768px) {
-  .logo,
-  .nav-center {
+  .nav-links {
     display: none;
   }
-
-  .mobile-header {
+  .logo-right, .logo-left {
+    order: unset;
+  }
+  header {
+    justify-content: space-between;
+  }
+  .mobile-controls {
     display: flex;
-    padding: 10px 20px;
+    align-items: center;
+  }
+  .logo-right, .logo-left {
+    display: inline-block;
+  }
+  .logo-right img, .logo-left img {
+    height: 50px;
   }
 }
