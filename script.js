@@ -1,7 +1,20 @@
-function openMenu() {
-  document.getElementById("sideMenu").style.right = "0";
-}
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileSlide = document.getElementById("mobileSlide");
+const closeBtn = document.querySelector(".close-btn");
 
-function closeMenu() {
-  document.getElementById("sideMenu").style.right = "-100%";
-}
+// فتح/غلق القائمة العادية
+hamburger.addEventListener("click", () => {
+  mobileMenu.style.display =
+    mobileMenu.style.display === "block" ? "none" : "block";
+});
+
+// فتح القائمة slide
+hamburger.addEventListener("click", () => {
+  mobileSlide.style.width = "250px"; // العرض عند الفتح
+});
+
+// غلق القائمة slide
+closeBtn.addEventListener("click", () => {
+  mobileSlide.style.width = "0";
+});
