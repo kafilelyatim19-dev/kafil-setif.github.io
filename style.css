@@ -1,140 +1,167 @@
-/* إعدادات أساسية */
-body {
-  font-family: 'Cairo', sans-serif;
+/* ========== RESET أساسي ========== */
+* {
   margin: 0;
   padding: 0;
-  background: #fff;
-  color: #111;
-  line-height: 1.6;
+  box-sizing: border-box;
 }
 
-/* الهيدر */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+body {
+  font-family: "Tahoma", Arial, sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #000;
+}
+
+/* ========== الهيدر للـ PC ========== */
+header {
+  width: 100%;
   background: #fff;
   border-bottom: 1px solid #ddd;
-  padding: 10px 20px;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* الشعارين */
+/* الشعارين في الهيدر */
+.logo-right img,
+.logo-left img {
+  height: 40px; 
+  max-height: 40px;
+  width: auto;
+}
+
+/* مجموعة الشعارات (للموبايل) */
 .logos-group {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
-.logos-group img {
-  height: 60px;
-}
-
-/* الروابط (كمبيوتر) */
-.nav-links {
+/* عناصر القائمة الرئيسية */
+nav ul {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 20px;
-  margin: 0;
-  padding: 0;
 }
 
-.nav-links a {
+nav ul li a {
   text-decoration: none;
-  color: #111;
-  font-weight: 600;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.nav-links a.active {
+nav ul li a.active {
   color: green;
 }
 
-/* نسخة الهاتف */
-.mobile-menu {
+nav ul li a:hover {
+  color: green;
+}
+
+/* زر ساهم معنا */
+.cta-btn {
+  background: green;
+  color: #fff !important;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: darkgreen;
+}
+
+/* ========== الموبايل ========== */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.mobile-header-right {
   display: none;
   align-items: center;
   gap: 10px;
 }
 
-.menu-icon {
-  font-size: 26px;
-  cursor: pointer;
-}
-
-.donate-btn {
-  background: green;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* القائمة الجانبية للهاتف */
-.side-menu {
+/* القائمة الجانبية */
+.mobile-menu {
+  display: none;
   position: fixed;
   top: 0;
-  right: -100%;
-  width: 60%;
+  right: 0;
   height: 100%;
+  width: 60%;
+  max-width: 280px;
   background: #fff;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
-  transition: right 0.3s ease;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
+  z-index: 1000;
 }
 
-.side-menu ul {
+.mobile-menu ul {
   list-style: none;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
 }
 
-.side-menu a {
+.mobile-menu ul li a {
   text-decoration: none;
-  color: #111;
-  display: block;
-  padding: 10px 0;
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
 }
 
-.side-menu a.active {
+.mobile-menu ul li a.active {
   color: green;
 }
 
-.close-btn {
-  font-size: 24px;
+.mobile-menu .close-btn {
+  font-size: 28px;
+  background: none;
+  border: none;
   cursor: pointer;
-  display: block;
-  margin-bottom: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
-/* المحتوى */
-.content {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-footer {
-  text-align: center;
-  background: #f4f4f4;
-  padding: 10px;
-  margin-top: 20px;
-}
-
-/* Responsive للهاتف */
+/* ========== RESPONSIVE للهاتف ========== */
 @media (max-width: 768px) {
-  .nav-links {
+  header {
+    justify-content: space-between;
+  }
+
+  nav {
     display: none;
   }
 
-  .mobile-menu {
-    display: flex;
-    align-items: center;
+  .logo-right,
+  .logo-left {
+    display: none;
   }
 
   .logos-group {
-    justify-content: flex-start;
-    gap: 5px;
+    display: flex;
   }
 
   .logos-group img {
-    height: 45px;
+    height: 34px;
+    max-height: 34px;
+    width: auto;
+  }
+
+  .mobile-header-right {
+    display: flex;
   }
 }
