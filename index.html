@@ -5,67 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>الرئيسية - الجمعية الخيرية كافل اليتيم الوطنية - المكتب الولائي سطيف</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <!-- الهيدر -->
+  <!-- ========== الهيدر ========== -->
   <header>
-    <nav class="navbar">
-      <!-- الشعارين (كمبيوتر: يمين ويسار | هاتف: جنب بعض يسار) -->
-      <div class="logos-group">
-        <img src="images/logo1.png" alt="شعار الجمعية 1">
-        <img src="images/logo2.png" alt="شعار الجمعية 2">
+    <!-- الشعارين -->
+    <div class="logos-group">
+      <div class="logo-right">
+        <img src="images/logo1.png" alt="شعار الجمعية">
       </div>
+      <div class="logo-left">
+        <img src="images/logo2.png" alt="شعار ثاني">
+      </div>
+    </div>
 
-      <!-- روابط التصفح (كمبيوتر فقط) -->
-      <ul class="nav-links">
+    <!-- قائمة الكمبيوتر -->
+    <nav>
+      <ul>
         <li><a href="index.html" class="active">الرئيسية</a></li>
         <li><a href="about.html">من نحن</a></li>
         <li><a href="wilaya.html">المكتب الولائي</a></li>
-        <li><a href="campaigns.html">الحملات</a></li>
-        <li><a href="projects.html">المشاريع</a></li>
-        <li><a href="municipal.html">المكاتب البلدية</a></li>
-        <li><a href="news.html">آخر المستجدات</a></li>
-        <li><a href="contact.html">تواصل معنا</a></li>
+        <li><a href="activities.html">الأنشطة</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
       </ul>
-
-      <!-- نسخة الهاتف -->
-      <div class="mobile-menu">
-        <span class="menu-icon" onclick="openMenu()">☰</span>
-        <button class="donate-btn">ساهم معنا</button>
-      </div>
     </nav>
+
+    <!-- زر ساهم معنا + زر القائمة (موبايل) -->
+    <div class="mobile-header-right">
+      <button class="menu-toggle">&#9776;</button>
+      <a href="donate.html" class="cta-btn">ساهم معنا</a>
+    </div>
   </header>
 
-  <!-- القائمة الجانبية للهاتف -->
-  <div class="side-menu" id="sideMenu">
-    <span class="close-btn" onclick="closeMenu()">✖</span>
+  <!-- القائمة المنسدلة في الهاتف -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn">&times;</button>
     <ul>
       <li><a href="index.html" class="active">الرئيسية</a></li>
       <li><a href="about.html">من نحن</a></li>
       <li><a href="wilaya.html">المكتب الولائي</a></li>
-      <li><a href="campaigns.html">الحملات</a></li>
-      <li><a href="projects.html">المشاريع</a></li>
-      <li><a href="municipal.html">المكاتب البلدية</a></li>
-      <li><a href="news.html">آخر المستجدات</a></li>
-      <li><a href="contact.html">تواصل معنا</a></li>
+      <li><a href="activities.html">الأنشطة</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
     </ul>
   </div>
 
-  <!-- المحتوى الرئيسي -->
-  <main class="content">
-    <h1>مرحباً بكم في الجمعية الخيرية كافل اليتيم الوطنية - المكتب الولائي سطيف</h1>
-    <p>
-      نسعى لخدمة الأيتام وتقديم الدعم لهم عبر مشاريع خيرية، حملات إنسانية، وأنشطة متنوعة.
-      تابعوا آخر أخبارنا ومستجداتنا من خلال الموقع.
-    </p>
+  <!-- ========== المحتوى الرئيسي ========== -->
+  <main>
+    <h1>مرحبا بكم في موقع الجمعية الخيرية كافل اليتيم - سطيف</h1>
+    <p>هنا يمكن وضع نبذة تعريفية عن الجمعية وأهدافها.</p>
   </main>
 
-  <!-- الفوتر -->
+  <!-- ========== الفوتر ========== -->
   <footer>
     <p>© 2025 الجمعية الخيرية كافل اليتيم الوطنية - المكتب الولائي سطيف</p>
   </footer>
 
+  <!-- ربط ملف JS -->
+  <script src="script.js"></script>
 </body>
 </html>
