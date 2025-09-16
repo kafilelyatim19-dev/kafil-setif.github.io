@@ -1,13 +1,12 @@
-const hamburger = document.querySelector(".hamburger");
-const mobileSlide = document.getElementById("mobileSlide");
-const closeBtn = document.querySelector(".close-btn");
+// فتح وإغلاق القائمة المنسدلة
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
+const closeMenu = document.querySelector('.close-menu');
 
-// فتح القائمة slide
-hamburger.addEventListener("click", () => {
-  mobileSlide.style.width = "250px";
+menuToggle.addEventListener('click', () => {
+  mobileMenu.style.right = '0';
 });
 
-// غلق القائمة slide
-closeBtn.addEventListener("click", () => {
-  mobileSlide.style.width = "0";
+closeMenu.addEventListener('click', () => {
+  mobileMenu.style.right = '-100%';
 });
